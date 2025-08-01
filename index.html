@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You ❤️</title>
+    <title>For Someone Special ❤️</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="button-container">
-            <button id="loveButton">Touch My Heart</button>
-            <div class="heart-shape"></div>
+    <div class="login-container" id="loginContainer">
+        <div class="login-box">
+            <h1>For Your Eyes Only</h1>
+            <p class="hint">(If you don't know the password, ask your mom about it)</p>
+            <input type="password" id="passwordInput" placeholder="Enter the secret code" maxlength="6" inputmode="numeric">
+            <button id="loginBtn">Unlock My Heart</button>
+            <p id="errorMsg" class="error-message"></p>
         </div>
-        <div id="message" class="hidden">
-            <p class="love-message">iloveyousomuchhhh baby</p>
-            <div class="interactive-options">
-                <button class="response-btn" id="hugBtn">Send Virtual Hug</button>
-                <button class="response-btn" id="kissBtn">Send Kiss</button>
-                <button class="response-btn" id="flowerBtn">Send Flowers</button>
+    </div>
+
+    <div class="content-container hidden" id="contentContainer">
+        <!-- All your existing content goes here -->
+        <div class="container">
+            <div class="button-container">
+                <button id="loveButton">Touch My Heart</button>
+                <div class="heart-shape"></div>
+            </div>
+            <div id="message" class="hidden">
+                <p class="love-message">iloveyousomuchhhh baby</p>
+                <div class="interactive-options">
+                    <button class="response-btn" id="hugBtn">Send Virtual Hug</button>
+                    <button class="response-btn" id="kissBtn">Send Kiss</button>
+                    <button class="response-btn" id="flowerBtn">Send Flowers</button>
+                </div>
             </div>
         </div>
     </div>
+
     <canvas id="particles-canvas"></canvas>
     <audio id="heartbeatSound" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-single-heartbeat-965.mp3"></audio>
     <audio id="hugSound" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-creaky-bedroom-door-1083.mp3"></audio>
     <audio id="kissSound" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-kissing-sound-1490.mp3"></audio>
     <script src="script.js"></script>
 </body>
-                </html>
+    </html>
