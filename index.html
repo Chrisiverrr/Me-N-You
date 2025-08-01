@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me N You</title>
+    <title>For You ❤️</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <button id="loveButton">Click Me</button>
-        <p id="message" class="hidden">iloveyousomuchhhh baby</p>
+        <div class="button-container">
+            <button id="loveButton">Touch My Heart</button>
+            <div class="heart-shape"></div>
+        </div>
+        <div id="message" class="hidden">
+            <p class="love-message">iloveyousomuchhhh baby</p>
+            <div class="interactive-options">
+                <button class="response-btn" id="hugBtn">Send Virtual Hug</button>
+                <button class="response-btn" id="kissBtn">Send Kiss</button>
+                <button class="response-btn" id="flowerBtn">Send Flowers</button>
+            </div>
+        </div>
     </div>
+    <div id="particles-js"></div>
+    <audio id="heartbeatSound" src="https://assets.mixkit.co/sfx/preview/mixkit-single-heartbeat-965.mp3"></audio>
+    <audio id="hugSound" src="https://assets.mixkit.co/sfx/preview/mixkit-creaky-bedroom-door-1083.mp3"></audio>
+    <audio id="kissSound" src="https://assets.mixkit.co/sfx/preview/mixkit-kissing-sound-1490.mp3"></audio>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
