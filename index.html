@@ -3,43 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Someone Special ❤️</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Me N You - Maintenance</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .maintenance-container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            box-shadow: 0 8px 32px rgba(255, 107, 129, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff4757;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .heart {
+            font-size: 3rem;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #secretAccess {
+            margin-top: 30px;
+            padding: 10px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+        }
+        
+        #secretAccess a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <div class="login-container" id="loginContainer">
-        <div class="login-box">
-            <h1>For Your Eyes Only</h1>
-            <p class="hint">(If you don't know the password, ask your mom about it)</p>
-            <input type="password" id="passwordInput" placeholder="Enter the secret code" maxlength="6" inputmode="numeric">
-            <button id="loginBtn">Unlock My Heart</button>
-            <p id="errorMsg" class="error-message"></p>
+    <div class="maintenance-container">
+        <div class="heart">❤️</div>
+        <h1>Me N You</h1>
+        <p>Our website is currently under maintenance</p>
+        <p>We're working hard to make it even more special for you!</p>
+        <p>Please come back soon...</p>
+        
+        <div id="secretAccess" class="hidden">
+            <p>Secret access for special someone:</p>
+            <a href="#" id="secretLink">Click here</a>
         </div>
     </div>
 
-    <div class="content-container hidden" id="contentContainer">
-        <!-- All your existing content goes here -->
-        <div class="container">
-            <div class="button-container">
-                <button id="loveButton">Touch My Heart</button>
-                <div class="heart-shape"></div>
-            </div>
-            <div id="message" class="hidden">
-                <p class="love-message">iloveyousomuchhhh baby</p>
-                <div class="interactive-options">
-                    <button class="response-btn" id="hugBtn">Send Virtual Hug</button>
-                    <button class="response-btn" id="kissBtn">Send Kiss</button>
-                    <button class="response-btn" id="flowerBtn">Send Flowers</button>
-                </div>
-            </div>
-        </div>
+    <!-- This div will contain your actual website content -->
+    <div id="websiteContent" class="hidden">
+        <!-- Your existing website content goes here -->
     </div>
 
-    <canvas id="particles-canvas"></canvas>
-    <audio id="heartbeatSound" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-single-heartbeat-965.mp3"></audio>
-    <audio id="hugSound" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-creaky-bedroom-door-1083.mp3"></audio>
-    <audio id="kissSound" preload="auto" src="https://assets.mixkit.co/sfx/preview/mixkit-kissing-sound-1490.mp3"></audio>
-    <script src="script.js"></script>
+    <script>
+        // Show secret access link after 5 seconds
+        setTimeout(() => {
+            document.getElementById('secretAccess').classList.remove('hidden');
+        }, 5000);
+        
+        // Handle secret link click
+        document.getElementById('secretLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.maintenance-container').classList.add('hidden');
+            document.getElementById('websiteContent').classList.remove('hidden');
+            
+            // Initialize your website here or load your existing script
+            // For example: initializeApp();
+        });
+    </script>
 </body>
     </html>
